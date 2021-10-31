@@ -1,0 +1,4 @@
+#number,arraynumber,levelreq,shader,model,handmodel,name,desc,headmodel
+1,0,1,icon_deadpool,deadpool,viewhands_engineer,Deadpool,Captain Deadpool! No.. just Deadpool.,
+2,1,5,icon_shrek,plr_terry_shrek,viewhands_mw2_airport,Shrek,Get out of my swamp!,
+3,2,10,icon_laracroft,plr_terry_laracroft,viewhands_farmgirl,Lara Croft,Everything lost is meant to be found.,
