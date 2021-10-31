@@ -1,4 +1,4 @@
-# Pluto IW5 Infected Mod
+# Pluto IW5 Deathrun Mod
 
 ## Building
 Prenotes: Whereas "MW3_Root", you should be aware it is the root directory of your mw3 installation. <br>
