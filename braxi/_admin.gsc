@@ -779,6 +779,6 @@ cmd_wtf()
 		return;
 
 	playFx( level.fx["bombexplosion"], self.origin );
-	self doDamage( self, self, self.health+1, 0, "MOD_EXPLOSIVE", "none", self.origin, self.origin, "none" );
+	//self doDamage( self, self, self.health+1, 0, "MOD_EXPLOSIVE", "none", self.origin, self.origin, "none" );
 	self suicide();
 }
