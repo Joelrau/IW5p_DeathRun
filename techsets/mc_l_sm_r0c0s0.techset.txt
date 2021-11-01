@@ -43,7 +43,7 @@
 42: l_omni_r0c0_dtex
 43: l_spot_shad_sm_r0c0_dtex
 44: l_spot_shad_sm_r0c0_dtex
-45: l_spot_shad_sm_r0c0_dtex
+45: nullptr
 46: nullptr
 47: nullptr
 48: nullptr

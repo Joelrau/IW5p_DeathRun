@@ -43,7 +43,7 @@
 42: l_omni_b0c0
 43: l_spot_shad_sm_b0c0
 44: l_spot_shad_sm_b0c0
-45: l_spot_shad_sm_b0c0
+45: nullptr
 46: nullptr
 47: nullptr
 48: nullptr
