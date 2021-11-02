@@ -119,6 +119,8 @@ xmodel,gib_leg
 xmodel,viewhands_engineer
 xmodel,viewhands_farmgirl
 xmodel,viewhands_mw2_airport
+xmodel,viewhands_black_kit
+xmodel,viewmodel_hands_zombie
 
 # FX
 fx,deathrun/falling_teddys
@@ -199,6 +201,38 @@ xmodel,plr_terry_hitler
 # Spiderman
 material,icon_spiderman
 xmodel,playermodel_vcfox_spiderman
+
+# Black Panther
+material,icon_blackpanther
+xmodel,plr_terry_blackpanther
+
+# Purple Heart
+material,icon_purpleheart
+xmodel,plr_terry_purpleheart
+
+# Dragon Warrior
+material,icon_dragonwarrior
+xmodel,plr_terry_dragonwarrior
+
+# Hell Demon
+material,icon_helldemon
+xmodel,plr_terry_helldemon
+
+# Motoko
+material,icon_motoko
+xmodel,plr_terry_motoko
+
+# Ratchet
+material,icon_ratchet
+xmodel,ratchet
+
+# Scifi Female
+material,icon_scififemale
+xmodel,plr_terry_scififemale
+
+# Ursegor
+material,icon_ursegor
+xmodel,plr_terry_ursegor
 
 # WEAPONS (required zones: common_mp)
 weapon,iw5_deserteagleiw3_mp

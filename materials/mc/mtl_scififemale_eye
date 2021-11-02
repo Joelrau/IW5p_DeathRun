@@ -5,6 +5,16 @@
     "constantTable": [
         {
             "literal": [
+                0.010999999940395355,
+                1.2999999523162842,
+                0.0989999994635582,
+                2.0
+            ],
+            "name": "envMapParms",
+            "nameHash": 1033475292
+        },
+        {
+            "literal": [
                 1.0,
                 1.0,
                 1.0,
@@ -17,8 +27,16 @@
     "gameFlags": 80,
     "maps": [
         {
+            "firstCharacter": 115,
+            "image": "~scififemale_eyes_spec-rgb&$white-l-11",
+            "lastCharacter": 112,
+            "sampleState": 11,
+            "semantic": 8,
+            "typeHash": 887934131
+        },
+        {
             "firstCharacter": 110,
-            "image": "$identitynormalmap",
+            "image": "scififemale_eyes_norm",
             "lastCharacter": 112,
             "sampleState": 1,
             "semantic": 5,
@@ -26,14 +44,14 @@
         },
         {
             "firstCharacter": 99,
-            "image": "maven_body",
+            "image": "scififemale_eyes",
             "lastCharacter": 112,
             "sampleState": 11,
             "semantic": 2,
             "typeHash": 2695565377
         }
     ],
-    "name": "mc/mtl_maven_body",
+    "name": "mc/mtl_scififemale_eye",
     "sortKey": 1,
     "stateFlags": 121,
     "stateMap": [
@@ -63,6 +81,6 @@
         ]
     ],
     "surfaceTypeBits": 0,
-    "techniqueSet->name": "mc_l_sm_r0c0_sat",
-    "unknown": 4096
+    "techniqueSet->name": "mc_l_sm_r0c0s0",
+    "unknown": 0
 }

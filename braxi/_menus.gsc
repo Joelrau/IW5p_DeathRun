@@ -14,7 +14,7 @@ init()
 
 	_precacheMenu( "dr_help" );
 	_precacheMenu( "dr_characters" );
-	//_precacheMenu( "dr_characters_2" );
+	_precacheMenu( "dr_characters_2" );
 	_precacheMenu( "dr_weapons" );
 	//_precacheMenu( "dr_weapons_2" );
 	_precacheMenu( "dr_knives" );
@@ -134,7 +134,7 @@ onMenuResponse()
 			continue;
 		}
 		
-		if( menu == "dr_characters" )
+		if( menu == "dr_characters" || menu == "dr_characters_2" )
 		{
 			character = int(response)-1; // scripting hacks everywhere :o
 			if( braxi\_rank::isCharacterUnlocked( character ) )
