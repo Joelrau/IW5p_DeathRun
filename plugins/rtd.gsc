@@ -48,6 +48,8 @@ rtd_init()
 	if( isDefined(self.rtd_initialized) && self.rtd_initialized == true /*|| self.pers["team"] != "allies"*/ )
 		return;
 	
+	level waittill("game started");
+	
     self notifyOnPlayerCommand( "rtd_on", level.rtd_button );
 	
 	self.rtd_initialized = true;
@@ -68,6 +70,8 @@ rtd()
 	{
 		return;
 	}
+	
+	level waittill("game started");
 	
 	self thread help_hud();
 	
@@ -324,7 +328,7 @@ help_hud()
 	self endon("rtdhelphud");
 	if(isDefined(self.rtd_help_hud))
 		self.rtd_help_hud destroy();
-	self.rtd_help_hud = createText("default",1.5,"LEFT","LEFT",5,-125,1,10,"Press ^2[{" + level.rtd_button + "}]^7 to Roll the Dice!");
+	self.rtd_help_hud = createText("default",1.5,"TOPLEFT","TOPLEFT",5,105,1,10,"Press ^2[{" + level.rtd_button + "}]^7 to Roll the Dice!");
 	self.rtd_help_hud.glowAlpha = 1;
 	self.rtd_help_hud.glowColor = (0,1,1);
 	self.rtd_help_hud.hidewheninmenu = true;

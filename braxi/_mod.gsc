@@ -91,7 +91,7 @@ main()
 	thread braxi\_menus::init();
 	thread braxi\_scoreboard::init();
 	thread braxi\_mapvoting::init();
-	//thread braxi\_playercard::init();
+	thread braxi\_playercard::init();
 	thread braxi\_maps::init();
 	
 	//bestMapScores();
@@ -117,9 +117,9 @@ main()
 
 	if( level.dvar["usePlugins"] )
 	{
-		println( "Initializing plugins..." );
+		print( "Initializing plugins..." );
 		thread plugins\_plugins::main();
-		println( "Plugins initialized" );
+		print( "Plugins initialized" );
 	}
 }
 
@@ -146,9 +146,7 @@ precache()
 	_precacheShader( "killiconmelee" );
 	_precacheShader( "killiconheadshot" );
 	_precacheShader( "killiconfalling" );
-	_precacheShader( "stance_stand" );
-	_precacheShader( "hudstopwatch" );
-	_precacheShader( "ui_host" );
+	_precacheShader( "hud_icon_life" );
 	_precacheShader( "HINT_FRIENDLY" );
 	
 	//_precacheShader( "splatter_alt" );
@@ -714,7 +712,7 @@ bunnyHoop()
 			X = anglesToForward( self.angles );
 			a = X[0] * self.bh;
 			b = X[1] * self.bh;
-			c = X[2] + self.bh + 20;
+			c = X[2] + self.bh + 40;
 			XD = (a, b, c);
 			
 			if (level.dvar["bunnyhoop_lagjump_fix"] == 1)
@@ -864,6 +862,8 @@ addTextHud( who, x, y, alpha, alignX, alignY, fontScale )
 	hud.alpha = alpha;
 	hud.alignX = alignX;
 	hud.alignY = alignY;
+	//hud.horzAlign = alignX + "_adjustable";
+	//hud.vertAlign = alignY + "_adjustable";
 	hud.fontScale = fontScale;
 	return hud;
 }
@@ -1311,8 +1311,8 @@ doHud()
     level.hud_round.foreground = true;
 	level.hud_round.alignX = "right";
 	level.hud_round.alignY = "top";
-	level.hud_round.horzAlign = "right";
-    level.hud_round.vertAlign = "top";
+	level.hud_round.horzAlign = "right_adjustable";
+    level.hud_round.vertAlign = "top_adjustable";
     level.hud_round.x = 0;
     level.hud_round.y = 20 + level.hudYOffset;
     level.hud_round.sort = 0;
@@ -1329,8 +1329,8 @@ doHud()
     level.hud_time.foreground = true;
 	level.hud_time.alignX = "right";
 	level.hud_time.alignY = "top";
-	level.hud_time.horzAlign = "right";
-    level.hud_time.vertAlign = "top";
+	level.hud_time.horzAlign = "right_adjustable";
+    level.hud_time.vertAlign = "top_adjustable";
     level.hud_time.x = 0;
     level.hud_time.y = 60 + level.hudYOffset;
     level.hud_time.sort = 0;
@@ -1348,8 +1348,8 @@ doHud()
     level.hud_jumpers.foreground = true;
 	level.hud_jumpers.alignX = "right";
 	level.hud_jumpers.alignY = "top";
-	level.hud_jumpers.horzAlign = "right";
-    level.hud_jumpers.vertAlign = "top";
+	level.hud_jumpers.horzAlign = "right_adjustable";
+    level.hud_jumpers.vertAlign = "top_adjustable";
     level.hud_jumpers.x = -3;
     level.hud_jumpers.y = 95 + level.hudYOffset;
     level.hud_jumpers.sort = 0;
@@ -1381,10 +1381,12 @@ freeRunChoice()
 
 	self.hud_freeround = newClientHudElem( self );
 	self.hud_freeround.elemType = "font";
-	self.hud_freeround.x = 320;
-	self.hud_freeround.y = 370;
+	self.hud_freeround.x = 0;
+	self.hud_freeround.y = 80;
 	self.hud_freeround.alignX = "center";
 	self.hud_freeround.alignY = "middle";
+	self.hud_freeround.horzAlign = "center_adjustable";
+    self.hud_freeround.vertAlign = "middle_adjustable";
 	self.hud_freeround.alpha = 1;
 	self.hud_freeround.font = "default";
 	self.hud_freeround.fontScale = 1.8;
@@ -1394,10 +1396,12 @@ freeRunChoice()
 
 	self.hud_freeround_time = newClientHudElem( self );
 	self.hud_freeround_time.elemType = "font";
-	self.hud_freeround_time.x = 320;
-	self.hud_freeround_time.y = 390;
+	self.hud_freeround_time.x = 0;
+	self.hud_freeround_time.y = 100;
 	self.hud_freeround_time.alignX = "center";
 	self.hud_freeround_time.alignY = "middle";
+	self.hud_freeround_time.horzAlign = "center_adjustable";
+    self.hud_freeround_time.vertAlign = "middle_adjustable";
 	self.hud_freeround_time.alpha = 1;
 	self.hud_freeround_time.font = "default";
 	self.hud_freeround_time.fontScale = 1.8;
@@ -1577,8 +1581,8 @@ new_ending_hud( align, fade_in_time, x_off, y_off )
 	hud.y = y_off;
 	hud.alignX = align;
 	hud.alignY = "middle";
-	hud.horzAlign = align;
-	hud.vertAlign = "middle";
+	hud.horzAlign = align + "_adjustable";
+	hud.vertAlign = "middle_adjustable";
 
  	hud.fontScale = 3;
 
@@ -1598,14 +1602,16 @@ new_ending_hud( align, fade_in_time, x_off, y_off )
 drawInformation( start_offset, movetime, mult, text )
 {
 	start_offset *= mult;
-	hud = new_ending_hud( "center", 0.1, start_offset, 90 );
+	hud = new_ending_hud( "center", 0.1, start_offset, 60 );
 	hud setText( text );
 	hud moveOverTime( movetime );
 	hud.x = 0;
 	wait( movetime );
 	wait( 3 );
-	hud moveOverTime( movetime );
-	hud.x = start_offset * -1;
+	//hud moveOverTime( movetime );
+	//hud.x = start_offset * -1;
+	hud fadeOverTime( movetime );
+	hud.alpha = 0;
 
 	wait movetime;
 	hud destroy();
@@ -1620,9 +1626,9 @@ SetupLives()
 
 	self.hud_lifes = []; // hud elems array
 	
-	self addLifeIcon( 0, 16, 94, -18, 10 );
-	self addLifeIcon( 1, 16, 94, -18, 10 );
-	self addLifeIcon( 2, 16, 94, -18, 10 );
+	self addLifeIcon( 0, 0, 110, -12, 10 );
+	self addLifeIcon( 1, 0, 110, -12, 11 );
+	self addLifeIcon( 2, 0, 110, -12, 12 );
 
 	wait .05;
 	
@@ -1693,22 +1699,20 @@ useLife()
 
 addLifeIcon( num, x, y, offset, sort )
 {
-
 	hud = newClientHudElem( self );
     hud.foreground = true;
 	hud.x = x + num * offset;
 	hud.y = y + level.hudYOffset;
-	hud setShader( "stance_stand", 64, 64 );
+	hud setShader( "hud_icon_life", 32, 32 );
 	hud.alignX = "right";
 	hud.alignY = "top";
-	hud.horzAlign = "right";
-	hud.vertAlign = "top";
+	hud.horzAlign = "right_adjustable";
+	hud.vertAlign = "top_adjustable";
 	hud.sort = sort;
 	hud.color = level.color_cool_green;
 	hud.glowColor = level.color_cool_green_glow;
 	hud.glowAlpha = 0;
 	hud.alpha = 0;
- 	hud.hidewheninmenu = true;
  	self.hud_lifes[num] = hud;
 }
 
@@ -1755,9 +1759,9 @@ endTimer()
 	if(isDefined(self.hud_time))
 		self.hud_time destroy();
 	
-	self.hud_time = addTextHud( self, 0, -15, 1, "left", "bottom", 1.5 );
-	self.hud_time.horzAlign = "left";
-    self.hud_time.vertAlign = "bottom";
+	self.hud_time = addTextHud( self, 5, -45, 1, "left", "bottom", 1.5 );
+	self.hud_time.horzAlign = "left_adjustable";
+    self.hud_time.vertAlign = "bottom_adjustable";
 	self.hud_time.glowAlpha = 1;
 	self.hud_time.glowColor = (0.7,0.9,0);
 	self.hud_time.hideWhenInMenu = true;
@@ -1785,9 +1789,9 @@ playerTimer()
 	
 	self.timerStartTime = getTime();
 	
-	self.hud_time = addTextHud( self, 0, -15, 1, "left", "bottom", 1.4 );
-	self.hud_time.horzAlign = "left";
-    self.hud_time.vertAlign = "bottom";
+	self.hud_time = addTextHud( self, 5, -45, 1, "left", "bottom", 1.4 );
+	self.hud_time.horzAlign = "left_adjustable";
+    self.hud_time.vertAlign = "bottom_adjustable";
 	self.hud_time.glowAlpha = 1;
 	self.hud_time.glowColor = (0.7,0.9,0);
 	self.hud_time.hideWhenInMenu = true;
@@ -1913,9 +1917,12 @@ firstBlood()
 	
 	level thread playLocalSoundToAllPlayers( level.sounds["sfx"]["firstblood"] );
 
-	hud = addTextHud( level, 320, 220, 0, "center", "middle", 2.4 );
+	hud = addTextHud( level, 0, -150, 0, "center", "middle", 2.4 );
 	hud setText( "First victim of this round is " + who.name );
 
+	hud.hidewheninmenu = true;
+	hud.horzAlign = "center_adjustable";
+    hud.vertAlign = "middle_adjustable";
 	hud.glowColor = (0.7,0,0);
 	hud.glowAlpha = 1;
 	hud SetPulseFX( 30, 100000, 700 );
@@ -1940,9 +1947,12 @@ lastJumper()
 	level.lastJumper = true;
 	level thread playLocalSoundToAllPlayers( level.sounds["sfx"]["lastalive"] );
 
-	hud = addTextHud( level, 320, 240, 0, "center", "middle", 2.4 );
+	hud = addTextHud( level, 0, -125, 0, "center", "middle", 2.4 );
 	hud setText( self.name + " is the last Jumper alive" );
 
+	hud.hidewheninmenu = true;
+	hud.horzAlign = "center_adjustable";
+    hud.vertAlign = "middle_adjustable";
 	hud.glowColor = (0.7,0,0);
 	hud.glowAlpha = 1;
 	hud SetPulseFX( 30, 100000, 700 );

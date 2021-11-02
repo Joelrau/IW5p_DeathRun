@@ -17,7 +17,7 @@ setupDvars()
 	addDvar( "allowLifes", "dr_allowLifes", 1, 0, 1, "int" );
 	
 	addDvar( "playerCards", "dr_playerCards", 1, 0, 1, "int" );
-	addDvar( "playerCardsMW2", "dr_playerCardsMW2", 0, 0, 1, "int" );
+	addDvar( "playerCardsMW3", "dr_playerCardsMW3", 0, 0, 1, "int" );
 
 	addDvar( "afk", "dr_afk", 1, 0, 1, "int" );
 	addDvar( "afk_warn", "dr_afk_warn", 15, 10, 999, "int" );

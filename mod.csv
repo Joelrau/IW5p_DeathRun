@@ -105,6 +105,8 @@ material,spray22_menu
 material,spray23_menu
 material,spray24_menu
 
+material,hud_icon_life
+
 # XMODELS
 xmodel,com_teddy_bear
 

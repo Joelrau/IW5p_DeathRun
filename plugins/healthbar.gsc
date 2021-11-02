@@ -17,6 +17,7 @@ init( modVersion )
         player thread CreateHealthBar();
         player thread RemoveHealthbarOn( "death" );
         player thread RemoveHealthbarOn( "disconnect" );
+		player thread RemoveHealthbarOnLevel( "endround" );
 		player thread RemoveHealthbarOnLevel( "intermission" );
     }
 }
@@ -31,7 +32,7 @@ CreateHealthBar()
 	hb_horzAlign = "center_adjustable";
 	hb_vertAlign = "bottom_adjustable";
 	hb_xOffset = 0;
-	hb_yOffset = -25;
+	hb_yOffset = -15;
 	hb_shaderWidth = 100;
 	hb_textXOffset = 0;
 		
@@ -64,7 +65,7 @@ CreateHealthBar()
 		self.hb_fg.hideWhenInMenu = true;
 		self.hb_fg setShader( "white", hb_shaderWidth, 14 );
 		
-		hb_textXOffset = hb_xOffset + (hb_shaderWidth / 2) - 30;
+		hb_textXOffset = hb_xOffset + (hb_shaderWidth / 2) - 50;
 	}
 
     if( getDvarInt("healthbar_counter") )

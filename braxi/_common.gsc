@@ -427,8 +427,8 @@ spawnHUD( x, y, alignX, alignY, color, font, duration )
 	self.spawnedhud.elemType = "font";
 	self.spawnedhud.alignX = alignX; //center
 	self.spawnedhud.alignY = alignY; //middle
-	self.spawnedhud.horzAlign = alignX;
-	self.spawnedhud.vertAlign = alignY;
+	self.spawnedhud.horzAlign = alignX + "_adjustable";
+	self.spawnedhud.vertAlign = alignY + "_adjustable";
 	self.spawnedhud.color = color;
 	self.spawnedhud.alpha = 1;
 	self.spawnedhud.sort = 0;

@@ -45,17 +45,17 @@ initVelo()
 	if (isDefined(self.hud_velo))
 		self.hud_velo destroy();
 
-	self.hud_velo = addTextHud( self, 0, -15, 1, "center", "bottom", 1.5 );
-	self.hud_velo.horzAlign = "center";
-    self.hud_velo.vertAlign = "bottom";
+	self.hud_velo = addTextHud( self, 0, -40, 1, "center", "bottom", 1.5 );
+	self.hud_velo.horzAlign = "center_adjustable";
+    self.hud_velo.vertAlign = "bottom_adjustable";
 	self.hud_velo.hidewheninmenu = true;
 	
 	if (isDefined(self.hud_maxvelo))
 		self.hud_maxvelo destroy();
 
-	self.hud_maxvelo = addTextHud( self, 0, -30, 1, "center", "bottom", 1.5 );
-	self.hud_maxvelo.horzAlign = "center";
-    self.hud_maxvelo.vertAlign = "bottom";
+	self.hud_maxvelo = addTextHud( self, 0, -55, 1, "center", "bottom", 1.5 );
+	self.hud_maxvelo.horzAlign = "center_adjustable";
+    self.hud_maxvelo.vertAlign = "bottom_adjustable";
 	self.hud_maxvelo.hidewheninmenu = true;
 	self.hud_maxvelo.label = &"^3(&&1)";
 	
