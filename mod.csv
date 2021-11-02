@@ -14,7 +14,7 @@ rawfile,braxi/_dvar.gsc
 rawfile,braxi/_maps.gsc
 rawfile,braxi/_mapvoting.gsc
 rawfile,braxi/_menus.gsc
-//rawfile,braxi/_playercard.gsc
+rawfile,braxi/_playercard.gsc
 rawfile,braxi/_mod.gsc
 rawfile,braxi/_rank.gsc
 rawfile,braxi/_scoreboard.gsc
