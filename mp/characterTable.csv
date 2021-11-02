@@ -1,4 +1,13 @@
 #number,arraynumber,levelreq,shader,model,handmodel,name,desc,headmodel
-1,0,1,icon_deadpool,deadpool,viewhands_engineer,Deadpool,Captain Deadpool! No.. just Deadpool.,
-2,1,5,icon_shrek,plr_terry_shrek,viewhands_mw2_airport,Shrek,Get out of my swamp!,
-3,2,10,icon_laracroft,plr_terry_laracroft,viewhands_farmgirl,Lara Croft,Everything lost is meant to be found.,
+1,0,1,icon_deadpool,deadpool,viewhands_engineer,Deadpool,Captain Deadpool! No.. just Deadpool.
+2,1,5,icon_shrek,plr_terry_shrek,viewhands_mw2_airport,Shrek,Get out of my swamp!
+3,2,10,icon_laracroft,plr_terry_laracroft,viewhands_farmgirl,Lara Croft,Everything lost is meant to be found.
+4,3,15,icon_johncena,plr_john_cena,viewhands_engineer,John Cena,I never back down and I never quit!,
+5,4,20,icon_johnwick,plr_terry_johnwick,viewhands_mw2_airport,John Wick,Whoever comes.. whoever it is... I'll kill them.
+6,5,25,icon_malice,plr_terry_malice,viewhands_farmgirl,Malice,Fortnite POGGERS.
+7,6,30,icon_lynx,plr_terry_lynx,viewhands_farmgirl,Lynx,Fortnite POGGERS2.
+8,7,35,icon_maven,plr_terry_maven,viewhands_farmgirl,Maven,Fortnite POGGERS3.
+9,8,40,icon_naruto,plr_terry_naruto,viewhands_engineer,Naruto,Never give up.
+10,9,45,icon_police,plr_terry_police,viewhands_engineer,Police Officer,Law is my life!
+11,10,50,icon_hitler,plr_terry_hitler,viewhands_mw2_airport,Adolf Hitler,Strength lies not in defence but in attack.
+12,11,50,icon_spiderman,playermodel_vcfox_spiderman,viewhands_engineer,Spiderman,With great power comes great responsibility.

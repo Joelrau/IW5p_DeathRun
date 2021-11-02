@@ -160,9 +160,45 @@ xmodel,deadpool
 material,icon_shrek
 xmodel,plr_terry_shrek
 
-# Shrek
+# Lara Croft
 material,icon_laracroft
 xmodel,plr_terry_laracroft
+
+# John Cena
+material,icon_johncena
+xmodel,plr_john_cena
+
+# John Wick
+material,icon_johnwick
+xmodel,plr_terry_johnwick
+
+# Malice
+material,icon_malice
+xmodel,plr_terry_malice
+
+# Lynx
+material,icon_lynx
+xmodel,plr_terry_lynx
+
+# Maven
+material,icon_maven
+xmodel,plr_terry_maven
+
+# Naruto
+material,icon_naruto
+xmodel,plr_terry_naruto
+
+# Police
+material,icon_police
+xmodel,plr_terry_police
+
+# Hitler
+material,icon_hitler
+xmodel,plr_terry_hitler
+
+# Spiderman
+material,icon_spiderman
+xmodel,playermodel_vcfox_spiderman
 
 # WEAPONS (required zones: common_mp)
 weapon,iw5_deserteagleiw3_mp
