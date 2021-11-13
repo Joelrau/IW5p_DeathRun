@@ -47,7 +47,7 @@
 		#include "ui_mp/dr_characters_common.inc"
 
 		DR_WEAPON( 100, 1 )
-		//DR_WEAPON( 140, 2 )
+		DR_WEAPON( 140, 2 )
 		//DR_WEAPON( 180, 3 )
 		//DR_WEAPON( 220, 4 )
 		//DR_WEAPON( 260, 5 )
