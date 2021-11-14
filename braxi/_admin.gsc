@@ -609,6 +609,15 @@ adminCommands( admin, pickingType )
 		}
 		break;
 
+	case "give":
+		player = getPlayer( arg1, pickingType );
+		if( isDefined( player ) && player isActuallyAlive() && isDefined( admin[2] ) )
+		{
+			player giveWeapon( admin[2] );
+			player switchToWeapon( admin[2] );
+		}
+		break;
+
 	case "drop":
 		player = getPlayer( arg1, pickingType );
 		if( isDefined( player ) && player isActuallyAlive() )
