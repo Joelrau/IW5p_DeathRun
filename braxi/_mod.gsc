@@ -62,15 +62,19 @@ main()
 			level.freeRun = true;
 	}
 	
-	setDvar( "jump_slowdownEnable", 0 );
-	setDvar( "bullet_penetration_enabled", 0 );
+	setDvar( "jump_slowdownEnable", "0" );
+	setDvar( "bullet_penetration_enabled", "0" );
 	setDvar( "bg_fallDamageMaxHeight", "300" ); // default falldmg max height
 	setDvar( "bg_fallDamageMinHeight", "128" ); // default falldmg min height
-	setDvar( "g_garvity", "800" ); // default gravity
+	setDvar( "g_gravity", "800" ); // default gravity
 	setDvar( "jump_height", "39" ); // default jump height
-	setDvar( "sv_enableBounces", "1" ); // bounce enable 
 	setDvar( "mod_author", "BraXi, quaK" );
 	makeDvarServerInfo( "mod_author", "BraXi, quaK" );
+	
+	setDvar( "sv_enableBounces", "1" ); // bounce enable 
+	setDvar( "sv_enableDoubleTaps", "1" ); // double taps enable
+	setDvar( "g_playerCollision", "2" ); // nobody
+	setDvar( "g_playerEjection", "2" ); // nobody
 	
 	maps\mp\gametypes\_hud::init();
 	maps\mp\gametypes\_hud_message::init();
@@ -557,7 +561,7 @@ PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLo
 
 spawnPlayer( origin, angles )
 {
-	waittillframeend;
+	//waittillframeend;
 	if( game["state"] == "endmap" || self.pers["team"] == "spectator" ) 
 		return;
 

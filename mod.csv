@@ -236,6 +236,9 @@ xmodel,plr_terry_ursegor
 
 # WEAPONS (required zones: common_mp)
 weapon,iw5_deserteagleiw3_mp
+weapon,iw5_remington700_mp
+weapon,iw5_m40a3_mp
+
 weapon,iw5_knife_mp
 weapon,iw5_magicdagger_mp
 weapon,iw5_knifebo2_mp
@@ -244,4 +247,3 @@ weapon,iw5_bayonet_mp
 weapon,iw5_statgear_mp
 weapon,iw5_blackhawk_mp
 weapon,iw5_slashnburn_mp
-weapon,iw5_remington700_mp

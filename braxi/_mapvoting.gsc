@@ -368,6 +368,9 @@ playerVisuals() {
 playerDelVisuals() {
 	self endon("disconnect");
 
+	if (!isdefined(self.voteitem))
+		return;
+
 	//BraX - this gave runtime errors when bots were enabled...
 	for (i=0; i<=level.mapitems; i++ ) 
 	{
