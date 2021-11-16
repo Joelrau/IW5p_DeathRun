@@ -296,10 +296,10 @@ _showTillNotified(notify1, notify2, notify3, notify4)
 	self notify("NEWshowTriggerTillNotified");
 	self endon("NEWshowTriggerTillNotified");
 	
-	self endon(notify1);
-	self endon(notify2);
-	self endon(notify3);
-	self endon(notify4);
+	if (isDefined(notify1)) self endon(notify1);
+	if (isDefined(notify2)) self endon(notify2);
+	if (isDefined(notify3)) self endon(notify3);
+	if (isDefined(notify4)) self endon(notify4);
 	while(!self.deleted)
 	{
 		_debugTrigger(self.volume);
@@ -359,6 +359,11 @@ _cursorHint( trigger, shader )
 	}
 	
 	if (isDefined(self.cursorhinthud))
+	{
+		return;
+	}
+	
+	if (!isDefined(shader) || shader == "" || shader == "HINT_NOICON")
 	{
 		return;
 	}

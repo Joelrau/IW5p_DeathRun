@@ -115,7 +115,7 @@ main()
 	level thread fastestTime();
 	
 	level thread noDoubleMusic();
-	//level thread forceDeath();
+	level thread forceDeath();
 	
 	visionSetNaked( level.mapName, 0 );
 
@@ -151,6 +151,7 @@ precache()
 	_precacheShader( "killiconheadshot" );
 	_precacheShader( "killiconfalling" );
 	_precacheShader( "hud_icon_life" );
+	_precacheShader( "HINT_NOICON" );
 	_precacheShader( "HINT_FRIENDLY" );
 	
 	//_precacheShader( "splatter_alt" );

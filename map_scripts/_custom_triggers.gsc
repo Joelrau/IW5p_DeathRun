@@ -215,6 +215,11 @@ private_cursorHint( trigger, shader )
 		return;
 	}
 	
+	if (!isDefined(shader) || shader == "" || shader == "HINT_NOICON")
+	{
+		return;
+	}
+	
 	self.cursorhinthud = maps\mp\gametypes\_hud_util::createIcon( shader, 32, 32 );
 	self.cursorhinthud.alignX = "center";
 	self.cursorhinthud.alignY = "middle";
@@ -394,10 +399,10 @@ private_showDebugTillNotified(notify1, notify2, notify3, notify4)
 	self notify("NEWTillNotified");
 	self endon("NEWTillNotified");
 	
-	self endon(notify1);
-	self endon(notify2);
-	self endon(notify3);
-	self endon(notify4);
+	if (isDefined(notify1)) self endon(notify1);
+	if (isDefined(notify2)) self endon(notify2);
+	if (isDefined(notify3)) self endon(notify3);
+	if (isDefined(notify4)) self endon(notify4);
 	while(isDefined(self))
 	{
 		self private_debug_info();
