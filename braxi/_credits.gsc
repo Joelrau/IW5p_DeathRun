@@ -11,6 +11,8 @@ main()
 	thread showCredit( "BraXi", 1.8 );
 	wait 0.5;
 	thread showCredit( "quaK", 1.8 );
+	wait 0.5;
+	thread showCredit( "Artyx", 1.8 );
 
 	wait 2.2;
 	thread showCredit( "Thanks for playing Death Run!", 2.4 );

@@ -68,7 +68,7 @@ setupDvars()
 
 	addDvar( "messages_enable", "dr_messages_enable", 1, 0, 1, "int" );
 	addDvar( "messages_delay", "dr_messages_delay", 25, 5, 999, "int" );
-	addDvar( "messages", "dr_messages", "This server is running Death Run, made by BraXi & quaK;", "", "", "string" );
+	addDvar( "messages", "dr_messages", "This server is running Death Run, made by BraXi, quaK & Artyx;", "", "", "string" );
 	addDvar( "lastmessage", "dr_lastmessage", "Hope you had fun!", "", "", "string" );
 
 	addDvar( "usePlugins", "dr_usePlugins", 1, 0, 1, "int" );
