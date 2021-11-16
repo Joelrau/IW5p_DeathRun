@@ -121,6 +121,7 @@ xmodel,viewhands_farmgirl
 xmodel,viewhands_mw2_airport
 xmodel,viewhands_black_kit
 xmodel,viewmodel_hands_zombie
+xmodel,captainamericaviewhands
 
 # FX
 fx,deathrun/falling_teddys
@@ -233,6 +234,10 @@ xmodel,plr_terry_scififemale
 # Ursegor
 material,icon_ursegor
 xmodel,plr_terry_ursegor
+
+# Captain America
+material,icon_captainamerica
+xmodel,captainamerica
 
 # WEAPONS (required zones: common_mp)
 weapon,iw5_deserteagleiw3_mp
