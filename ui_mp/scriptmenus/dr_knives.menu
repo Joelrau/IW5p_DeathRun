@@ -100,13 +100,13 @@
 		#include "ui_mp/dr_characters_common.inc"
 
 		DR_KNIFE( 100, 9 )
-		//DR_KNIFE( 140, 10 )
-		//DR_KNIFE( 180, 11 )
-		//DR_KNIFE( 220, 12 )
-		//DR_KNIFE( 260, 13 )
-		//DR_KNIFE( 300, 14 )
-		//DR_KNIFE( 340, 15 )
-		//DR_KNIFE( 380, 16 )
+		DR_KNIFE( 140, 10 )
+		DR_KNIFE( 180, 11 )
+		DR_KNIFE( 220, 12 )
+		DR_KNIFE( 260, 13 )
+		DR_KNIFE( 300, 14 )
+		DR_KNIFE( 340, 15 )
+		DR_KNIFE( 380, 16 )
 		
 		DR_BUTTON( "0", 90, 425, 50, 20, "@DRM_BACK", close self; open "dr_knives";, 1 )
 	}
