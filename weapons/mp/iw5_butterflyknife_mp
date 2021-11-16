@@ -839,7 +839,7 @@
         "pickupIcon": "",
         "pickupIconRatio": 2,
         "pitchConvergenceTime": 0.0,
-        "playerAnimType": 6,
+        "playerAnimType": 13,
         "playerDamage": 150,
         "playerSpread": 0.0,
         "projBeaconEffect": "",
