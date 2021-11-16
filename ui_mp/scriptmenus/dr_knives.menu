@@ -56,5 +56,58 @@
 		DR_KNIFE( 380, 8 )
 		
 		DR_BUTTON( "0", 90, 425, 100, 20, "@DRM_BACK_TO_MENU", close self; open "character_stuff";, 1 )
+		DR_BUTTON( "5", 260, 425, 50, 20, "@DRM_NEXT", close self; open "dr_knives_2";, 1 )
+	}
+
+	menuDef
+	{
+		name			"dr_knives_2"
+		rect			0 0 640 480
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		7.0
+		legacySplitScreenScale
+		
+		onOpen
+		{
+			execnow "set menuName @DRM_KNIVES"
+		}
+
+		onClose
+		{
+		}
+
+		onEsc
+		{
+			close self;
+			open "character_stuff";
+		}
+		
+		#include "ui_mp/dr_menu_frame.inc"
+		
+		// separator
+		itemDef 
+		{
+			rect			319 90 2 360
+
+			style			WINDOW_STYLE_SHADER
+			background		"white"
+			forecolor		1 1 1 0.6
+			visible			1
+			decoration
+		}
+
+		#include "ui_mp/dr_characters_common.inc"
+
+		DR_KNIFE( 100, 9 )
+		//DR_KNIFE( 140, 10 )
+		//DR_KNIFE( 180, 11 )
+		//DR_KNIFE( 220, 12 )
+		//DR_KNIFE( 260, 13 )
+		//DR_KNIFE( 300, 14 )
+		//DR_KNIFE( 340, 15 )
+		//DR_KNIFE( 380, 16 )
+		
+		DR_BUTTON( "0", 90, 425, 50, 20, "@DRM_BACK", close self; open "dr_knives";, 1 )
 	}
 }

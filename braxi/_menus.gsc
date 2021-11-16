@@ -18,6 +18,7 @@ init()
 	_precacheMenu( "dr_weapons" );
 	//_precacheMenu( "dr_weapons_2" );
 	_precacheMenu( "dr_knives" );
+	_precacheMenu( "dr_knives_2" );
 	_precacheMenu( "dr_sprays" );
 	//_precacheMenu( "dr_sprays_2" );
 
@@ -154,7 +155,7 @@ onMenuResponse()
 				self setClientDvar( "drui_weapon", item );
 			}
 		}
-		else if( menu == "dr_knives" )
+		else if( menu == "dr_knives" || menu == "dr_knives_2" )
 		{
 			knife = int(response)-1;
 			if( braxi\_rank::isKnifeUnlocked( knife ) ) 
