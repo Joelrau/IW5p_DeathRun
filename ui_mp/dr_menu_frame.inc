@@ -80,7 +80,7 @@
 			visible			when( menuisopen( "team_select" ) )
 			origin			550 445
 			forecolor		1 1 1 1
-			text			"Death Run Mod by BraXi, quaK & Atyx"
+			text			"Death Run Mod by BraXi, quaK & Artyx"
 			textfont		UI_FONT_NORMAL
 			textalign		ITEM_ALIGN_RIGHT
 			textscale		0.3
