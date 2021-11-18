@@ -150,9 +150,13 @@ precache()
 	_precacheShader( "killiconmelee" );
 	_precacheShader( "killiconheadshot" );
 	_precacheShader( "killiconfalling" );
-	_precacheShader( "hud_icon_life" );
+	_precacheShader( "stance_stand" );
+	_precacheShader( "hudstopwatch" );
+	_precacheShader( "ui_host" );
 	_precacheShader( "HINT_NOICON" );
 	_precacheShader( "HINT_FRIENDLY" );
+	
+	_precacheShader( "hud_icon_life" );
 	
 	//_precacheShader( "splatter_alt" );
 
@@ -357,6 +361,8 @@ playerConnect() // Called when player is connecting to server
 	self setClientDvar("drui_weapon", braxi\_stats::getStats("dr_weapon"));
 	self setClientDvar("drui_knife", braxi\_stats::getStats("dr_knife"));
 	self setClientDvar("drui_spray", braxi\_stats::getStats("dr_spray"));
+	
+	self setClientDvar("painVisionTriggerHealth", 0); // no .vision change
 	
 	//self thread healthOverlay();
 	self thread SetupLives();
