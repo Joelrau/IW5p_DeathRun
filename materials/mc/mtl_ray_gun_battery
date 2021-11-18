@@ -5,16 +5,6 @@
     "constantTable": [
         {
             "literal": [
-                0.18000000715255737,
-                0.949999988079071,
-                5.5,
-                2.0
-            ],
-            "name": "envMapParms",
-            "nameHash": 1033475292
-        },
-        {
-            "literal": [
                 1.0,
                 1.0,
                 1.0,
@@ -27,18 +17,10 @@
     "gameFlags": 80,
     "maps": [
         {
-            "firstCharacter": 115,
-            "image": "$null",
-            "lastCharacter": 112,
-            "sampleState": 11,
-            "semantic": 8,
-            "typeHash": 887934131
-        },
-        {
             "firstCharacter": 110,
             "image": "$identitynormalmap",
             "lastCharacter": 112,
-            "sampleState": 11,
+            "sampleState": 1,
             "semantic": 5,
             "typeHash": 1507003663
         },
@@ -81,6 +63,6 @@
         ]
     ],
     "surfaceTypeBits": 0,
-    "techniqueSet->name": "mc_l_sm_r0c0n0s0",
-    "unknown": 0
+    "techniqueSet->name": "mc_l_sm_r0c0_sat",
+    "unknown": 4096
 }
