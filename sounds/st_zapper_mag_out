@@ -149,7 +149,7 @@
             "subtitle": null,
             "type": 1,
             "velocityMin": 0.0,
-            "volMax": 0.8,
+            "volMax": 0.800000011920929,
             "volMin": 0.75,
             "volModIndex": 18,
             "volumeFalloffCurve": "$default"
