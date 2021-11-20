@@ -19,7 +19,7 @@
             "pitchMax": 1.0499999523162842,
             "pitchMin": 0.949999988079071,
             "probability": 1.0,
-            "secondaryAliasName": "weap_mech_layer_s_plr",
+            "secondaryAliasName": null,
             "sequence": 0,
             "slavePercentage": 0.8999999761581421,
             "soundfile": "weapons/iw3/de/weap_deserteagle_slst_2.wav",
