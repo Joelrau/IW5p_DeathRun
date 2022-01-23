@@ -671,8 +671,8 @@ adminCommands( admin, pickingType )
 				player braxi\_mod::spawnPlayer();
 				player iPrintlnBold( "^1You were respawned by the Admin" );
 			}
-			iPrintln( "^3[admin]:^7 respawned all players." );
 		}
+		iPrintln( "^3[admin]:^7 respawned all players." );
 		break;
 		
 	case "givexp":
