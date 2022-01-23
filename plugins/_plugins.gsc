@@ -29,6 +29,7 @@ main()
 	
 	LoadPlugin( plugins\admins::init, "Admins", "quaK" );
 	
+	LoadPlugin( plugins\ghostrun::init, "Ghost Run", "quaK" );
 	LoadPlugin( plugins\rtd::init, "Roll The Dice", "quaK" );
 	LoadPlugin( plugins\simplevelometer::init, "Velocity meter", "Ohh Rexy<3" );
 	LoadPlugin( plugins\ez_knife::init, "EZ Knife", "Ohh Rexy<3" );
