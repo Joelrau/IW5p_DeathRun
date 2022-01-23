@@ -481,6 +481,7 @@ dropPlayer( player, method )
 
 partymode() 
 {
+	level notify("stopparty");
 	level endon("stopparty");
 	iPrintLnBold("^:PARTY MODE!");
 	ambientPlay("party");

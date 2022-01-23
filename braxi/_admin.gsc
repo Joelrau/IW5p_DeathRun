@@ -657,6 +657,23 @@ adminCommands( admin, pickingType )
 			iPrintln( "^3[admin]:^7 " + player.name + " ^7respawned." );
 		}
 		break;
+	
+	case "spawnall":
+		players = braxi\_common::getAllPlayers();
+		for ( i = 0; i < players.size; i++ )
+		{
+			player = players[i];
+			
+			if( isDefined( player ) && !player isActuallyAlive() )
+			{
+				if( !isDefined( player.pers["team"] ) || isDefined( player.pers["team"] ) && player.pers["team"] == "spectator" )
+					player braxi\_teams::setTeam( "allies" );
+				player braxi\_mod::spawnPlayer();
+				player iPrintlnBold( "^1You were respawned by the Admin" );
+			}
+			iPrintln( "^3[admin]:^7 respawned all players." );
+		}
+		break;
 		
 	case "givexp":
 		player = getPlayer( arg1, pickingType );
@@ -687,6 +704,10 @@ adminCommands( admin, pickingType )
 			player iPrintlnBold( "^3You got a Life from the Admin" );
 			iPrintln( "^3[admin]:^7 " + player.name + " ^7got a Life." );
 		}
+		break;
+	
+	case "party":
+		thread braxi\_common::partymode();
 		break;
 	
 	case "getplayernum":
