@@ -39,6 +39,13 @@ onPlayerSpawn()
 	}
 }
 
+onFreeRun()
+{
+	self endon("rtd_off");
+	level waittill("round_freerun");
+	self thread rtd_remove();
+}
+
 rtd_init()
 {
 	self endon("disconnect");
@@ -75,6 +82,8 @@ rtd()
 	
 	self thread help_hud();
 	
+	self thread onFreeRun();
+	
 	self waittill("rtd_on");
 	
 	if( self.sessionstate != "playing" )
@@ -93,6 +102,11 @@ rtd()
 	}
 	if( self.pers["team"] == "allies" )
 	{
+		if( level.trapsDisabled )
+		{
+			msg = "^2>>^6No Roll The Dice on a free run!^2<<"; if( level.dvar["pi_rtd_hudmsgs"] ) self thread unten(msg,(0.0, 0, 1.0)); else iPrintLnBold(msg);
+			return;
+		}
 		if( !isDefined( self.rtd_rolled ) || self.rtd_rolled == false )
 		{
 			self thread activated();
