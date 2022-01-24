@@ -125,6 +125,8 @@ main()
 		thread plugins\_plugins::main();
 		print( "Plugins initialized" );
 	}
+	
+	//thread viewmodel_hacks();
 }
 
 precache()
@@ -138,9 +140,9 @@ precache()
 	_precacheItem( "claymore_mp" );				// Insertion item
 	//_precacheItem( "tomahawk_mp" );				// Activator knife
 	
-	//_precacheModel( "mp_body_desert_tf141_assault_a" );		// Activator model
-	//_precacheModel( "head_hero_price_desert" );				// Activator model
-	//_precacheModel( "viewmodel_hands_zombie" );				// Activator model
+	_precacheModel( "mp_body_desert_tf141_assault_a" );		// Activator model
+	_precacheModel( "head_hero_price_desert" );				// Activator model
+	_precacheModel( "viewmodel_hands_zombie" );				// Activator model
 
 	_precacheMenu( "clientcmd" );
 	
@@ -181,6 +183,23 @@ precache()
 	precacheModel("mp_fullbody_ally_juggernaut");
 	precacheModel("viewhands_juggernaut_ally");
 	precacheItem("iw5_deserteagle_mp");
+}
+
+viewmodel_hacks()
+{
+	level waittill("jumper", player);
+	while(1)
+	{
+		if(player playerAds() > 0.0)
+		{
+			player setClientDvar("viewModelHacks", 1);
+		}
+		else
+		{
+			player setClientDvar("viewModelHacks", 0);
+		}
+		wait 0.1;
+	}
 }
 
 buildCharacterInfo()

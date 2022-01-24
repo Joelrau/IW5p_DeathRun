@@ -26,14 +26,11 @@ setPlayerModel( team )
 	}
 	else if( team == "axis" )
 	{
-		//self setModel("mp_body_desert_tf141_assault_a");
-		//self attach("head_hero_price_desert", "", true);
-		//self.headModel = "head_hero_price_desert";
-		//self setViewModel("viewmodel_hands_zombie");
+		self setModel("mp_body_desert_tf141_assault_a");
+		self attach("head_hero_price_desert", "", true);
+		self.headModel = "head_hero_price_desert";
+		self setViewModel("viewmodel_hands_zombie");
 		//self.voice = "taskforce";
-		self detachAll();
-		self setModel("mp_fullbody_ally_juggernaut");
-		self setViewModel("viewhands_juggernaut_ally");
 	}
 }
 
