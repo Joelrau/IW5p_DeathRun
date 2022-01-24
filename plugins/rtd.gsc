@@ -102,7 +102,7 @@ rtd()
 	}
 	if( self.pers["team"] == "allies" )
 	{
-		if( isDefined( self.finishedMap ) && self.finishedMap == true ) )
+		if( isDefined( self.finishedMap ) && self.finishedMap == true )
 		{
 			return;
 		}
