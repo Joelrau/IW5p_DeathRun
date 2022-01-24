@@ -1,25 +1,25 @@
 {
-    "animationX": 0,
-    "animationY": 0,
-    "cameraRegion": 3,
+    "animationX": 1,
+    "animationY": 1,
+    "cameraRegion": 4,
     "constantTable": null,
     "gameFlags": 0,
     "maps": [
         {
             "firstCharacter": 99,
-            "image": "icon_shrek",
+            "image": "icon_thanos",
             "lastCharacter": 112,
-            "sampleState": 11,
+            "sampleState": -30,
             "semantic": 0,
             "typeHash": 2695565377
         }
     ],
-    "name": "icon_shrek",
-    "sortKey": 29,
-    "stateFlags": 0,
+    "name": "icon_blackpanther",
+    "sortKey": 47,
+    "stateFlags": 3,
     "stateMap": [
         [
-            422089061,
+            403870053,
             3759013890
         ]
     ],

@@ -1,6 +1,6 @@
 #number,arraynumber,levelreq,shader,model,handmodel,name,desc,headmodel
 1,0,1,icon_deadpool,deadpool,viewhands_engineer,Deadpool,Captain Deadpool! No.. just Deadpool.,
-2,1,5,icon_shrek,plr_terry_shrek,viewhands_mw2_airport,Shrek,Get out of my swamp!,
+2,1,5,icon_thanos,plr_terry_thanos,viewhands_mw2_airport,Thanos,The end is near.,
 3,2,10,icon_laracroft,plr_terry_laracroft,viewhands_farmgirl,Lara Croft,Everything lost is meant to be found.,
 4,3,15,icon_johncena,plr_john_cena,viewhands_engineer,John Cena,I never back down and I never quit!,
 5,4,20,icon_johnwick,plr_terry_johnwick,viewhands_mw2_airport,John Wick,Whoever comes.. whoever it is... I'll kill them.,
