@@ -9,17 +9,18 @@ init( modVersion )
 		
 	disabled = false;
 	
-	collision = getDvarInt("g_playerCollision");
-	ejection = getDvarInt("g_playerEjection");
+	collision = getDvar("g_playerCollision");
+	ejection = getDvar("g_playerEjection");
+	
 	if(isDefined(collision) && isDefined(ejection))
 	{
-		if(collision != 2)
+		if(collision != "nobody")
 		{
 			iPrintLn("Ghost Run plugin: ^1Error: dvar 'g_playerCollision' is not 2^7");
 			disabled = true;
 		}
 		
-		if(ejection != 2)
+		if(ejection != "nobody")
 		{
 			iPrintLn("Ghost Run plugin: ^1Error: dvar 'g_playerEjection' is not 2^7");
 			disabled = true;
@@ -95,6 +96,9 @@ main()
 
 GhostRun()
 {
+	if(!isDefined(self) || !isPlayer(self))
+		return;
+	
 	self endon("disconnect");
 	self endon("killghostrun");
 	
@@ -154,20 +158,20 @@ GhostHud( text )
 {
 	if(!isDefined(self.ghostHud))
 	{
-		self.ghostHud = newclienthudElem(self);	
-		self.ghostHud.x = 0;	
-		self.ghostHud.y = -120;	
-		self.ghostHud.horzAlign = "center";	
-		self.ghostHud.vertAlign = "bottom";
-		self.ghostHud.alignX = "center_adjustable";
-		self.ghostHud.alignY = "bottom_adjustable";
+		self.ghostHud = newclienthudElem(self);
+		self.ghostHud.x = 0;
+		self.ghostHud.y = 50;
+		self.ghostHud.horzAlign = "center_adjustable";	
+		self.ghostHud.vertAlign = "middle_adjustable";
+		self.ghostHud.alignX = "center";
+		self.ghostHud.alignY = "middle";
 		self.ghostHud.font = "objective";
-		self.ghostHud.sort = 102;	
-		self.ghostHud.alpha = 1;	
+		self.ghostHud.sort = 102;
+		self.ghostHud.alpha = 1;
 		self.ghostHud.fontScale = 1.6;
 		self.ghostHud.color = (1,1,1);
 		self.ghostHud.foreground = true;	
-		self.ghostHud.archived = false;	
+		self.ghostHud.archived = false;
 		self.ghostHud.hidewheninmenu = true;
 	}
 	if(!isDefined(text) || text == "")

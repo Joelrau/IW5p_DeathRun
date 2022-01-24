@@ -102,6 +102,10 @@ rtd()
 	}
 	if( self.pers["team"] == "allies" )
 	{
+		if( isDefined( self.finishedMap ) && self.finishedMap == true ) )
+		{
+			return;
+		}
 		if( level.trapsDisabled )
 		{
 			msg = "^2>>^6No Roll The Dice on a free run!^2<<"; if( level.dvar["pi_rtd_hudmsgs"] ) self thread unten(msg,(0.0, 0, 1.0)); else iPrintLnBold(msg);
