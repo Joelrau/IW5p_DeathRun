@@ -164,9 +164,9 @@ fx,deathrun/spray24
 material,icon_deadpool
 xmodel,deadpool
 
-# Shrek
-material,icon_shrek
-xmodel,plr_terry_shrek
+# Thanos
+material,icon_thanos
+xmodel,plr_terry_thanos
 
 # Lara Croft
 material,icon_laracroft
