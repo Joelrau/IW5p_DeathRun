@@ -14,43 +14,45 @@ _resetDvar(dvar)
 {
     setDvar(dvar, "");
 }
- 
+
 _setClientDvar(player, dvar, dvar_value)
 {
-    dvarstring = "";
+    cvarstring = "";
+	
+	cvar = "cvar_" + player getGuid();
    
-    if (isDefined(getDvar(dvar)))
-        dvarstring = getDvar(dvar);
+    if (isDefined(getDvar(cvar)))
+        cvarstring = getDvar(cvar);
    
-    valuearray = strTok(dvarstring, ";");
-    dvarstring = "";
+    valuearray = strTok(cvarstring, ";");
+    cvarstring = "";
    
     foreach(value in valuearray)
     {
-        if (!stringContains(value, _getName(player)))
-            dvarstring += value + ";";
+		if (!stringContains(value, dvar))
+        cvarstring += value + ";";
     }
    
     if (isDefined(dvar_value))
-        dvarstring += _getName(player) + "=" + dvar_value + ";";
+        cvarstring += dvar + "=" + dvar_value + ";";
    
     valuearray = undefined;
-    setDvar(dvar, dvarstring);
+    setDvar(cvar, cvarstring);
 }
- 
+
 _getClientDvar(player, dvar, type)
 {
-    if (!isDefined(getDvar(dvar)))
+	cvar = "cvar_" + player getGuid();
+	
+    if (!isDefined(getDvar(cvar)))
         return undefined;
    
-    dvarvalue = getDvar(dvar);
-    values = strTok(dvarvalue, ";");
+    cvarvalue = getDvar(cvar);
+    values = strTok(cvarvalue, ";");
    
     foreach(value in values)
     {
-        name = _getName(player);
-       
-        if (stringContains(value, name))
+        if (stringContains(value, dvar))
         {
             string_value = getSubStr(value, _getIndexOf(value, "=", 0) + 1, value.size);
            
@@ -73,7 +75,7 @@ _getClientDvar(player, dvar, type)
     values = undefined;
     return undefined;
 }
- 
+
 _getIndexOf(string, value, startingIndex)
 {
     index = startingIndex;
@@ -89,23 +91,4 @@ _getIndexOf(string, value, startingIndex)
     }
    
     return -1;
-}
- 
-_getName(player)
-{
-	name = player.name;
-	name = stringReplace( name, ":", "?" );
-	name = stringReplace( name, ";", "?" );
-	name = stringReplace( name, "=", "?" );
-	name = name + ":" + player getGuid();
-	name = getSubStr(name, 0, name.size);
-	/*for(i = 0; i < name.size; i++)
-	{
-			if(name[i]=="]")
-					break;
-	}
-	if(name.size != i)
-			name = getSubStr(name, i + 1, name.size);
-   */
-	return name;
 }
