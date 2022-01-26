@@ -64,6 +64,8 @@ cd %moddir%
 copy /Y ..\..\zone\english\mod.ff
 del ..\..\zone\english\mod.ff
 
+appdataMod.bat
+
 pause
 exit 0
 
