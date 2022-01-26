@@ -160,7 +160,7 @@ GhostHud( text )
 	{
 		self.ghostHud = newclienthudElem(self);
 		self.ghostHud.x = 0;
-		self.ghostHud.y = 50;
+		self.ghostHud.y = 65;
 		self.ghostHud.horzAlign = "center_adjustable";	
 		self.ghostHud.vertAlign = "middle_adjustable";
 		self.ghostHud.alignX = "center";

@@ -1,5 +1,5 @@
 # REQUIRES
-require,common_mp
+#require,common_mp
 #require,mp_dome
 
 # RAWFILES
@@ -44,6 +44,12 @@ menufile,ui_mp/scriptmenus/dr_knives.menu
 menufile,ui_mp/scriptmenus/dr_sprays.menu
 menufile,ui_mp/scriptmenus/clientcmd.menu
 
+menufile,ui_mp/quickmessage.menu
+menufile,ui_mp/scriptmenus/quickcommands.menu
+menufile,ui_mp/scriptmenus/quickresponses.menu
+menufile,ui_mp/scriptmenus/quickstatements.menu
+menufile,ui_mp/scriptmenus/quickstuff.menu
+
 menufile,ui_mp/killstreaks_hd.menu
 menufile,ui_mp/hud_fullscreen.menu
 menufile,ui_mp/minimap_fullscreen.menu
@@ -54,6 +60,8 @@ localize,english/braxi
 localize,english/drm
 localize,english/maps
 localize,english/mapvote
+
+localize,english/quickmessage
 
 # STRINGTABLES
 stringtable,mp/characterTable.csv
@@ -82,6 +90,29 @@ sound,gib_splat
 
 sound,ui_pulse_text_delete
 sound,ui_pulse_text_type
+
+// battle chatter
+sound,US_mp_cmd_attackleftflank
+sound,US_mp_cmd_attackrightflank
+sound,US_mp_cmd_fallback
+sound,US_mp_cmd_followme
+sound,US_mp_cmd_holdposition
+sound,US_mp_cmd_movein
+sound,US_mp_cmd_regroup
+sound,US_mp_cmd_suppressfire
+sound,US_mp_rsp_comeon
+sound,US_mp_rsp_greatshot
+sound,US_mp_rsp_nosir
+sound,US_mp_rsp_onmyway
+sound,US_mp_rsp_sorry
+sound,US_mp_rsp_yessir
+sound,US_mp_stm_areasecure
+sound,US_mp_stm_enemiesspotted
+sound,US_mp_stm_enemyspotted
+sound,US_mp_stm_iminposition
+sound,US_mp_stm_needreinforcements
+sound,US_mp_stm_sniper
+sound,US_mp_stm_watchsix
 
 # MATERIALS
 material,spray0_menu

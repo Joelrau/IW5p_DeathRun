@@ -1,0 +1,197 @@
+#define ITEM_COUNT 		6
+#define HEIGHT 			16
+
+#define RECT_X 			-52
+#define RECT_Y 			(362 - (ITEM_COUNT * HEIGHT))
+#define RECT_WIDTH 		194
+#define RECT_HEIGHT 	(76 + (ITEM_COUNT * HEIGHT))
+
+{
+	menuDef
+	{
+		name "quickresponses"
+		rect RECT_X RECT_Y RECT_WIDTH RECT_HEIGHT 1 1
+		popup
+		style 1
+		border 1
+		borderSize 2
+		focuscolor 1 1 1 1
+		execKey "1"
+		{
+			scriptMenuResponse 1;
+			close self;
+		}
+		execKey "2"
+		{
+			scriptMenuResponse 2;
+			close self;
+		}
+		execKey "3"
+		{
+			scriptMenuResponse 3;
+			close self;
+		}
+		execKey "4"
+		{
+			scriptMenuResponse 4;
+			close self;
+		}
+		execKey "5"
+		{
+			scriptMenuResponse 5;
+			close self;
+		}
+		execKey "6"
+		{
+			scriptMenuResponse 6;
+			close self;
+		}
+		onOpen
+		{
+			setDvar cl_bypassMouseInput 1;
+		}
+		onClose
+		{
+			setDvar cl_bypassMouseInput 0;
+			play mouse_click;
+		}
+		onEsc
+		{
+			close self;
+		}
+		itemDef
+		{
+			rect -4 -4 RECT_WIDTH RECT_HEIGHT 0 0
+			decoration
+			visible 1
+			style 3
+			border 1
+			borderSize 2
+			forecolor 1 1 1 1
+			bordercolor 0.4 0.4 0.42 1
+			exp material ( "gradient_top" )
+		}
+		itemDef
+		{
+			rect -4 -4 RECT_WIDTH RECT_HEIGHT 0 0
+			decoration
+			visible 1
+			style 3
+			border 1
+			borderSize 2
+			forecolor 1 1 1 1
+			bordercolor 0.4 0.4 0.42 1
+			exp material ( "gradient_bottom" )
+		}
+		itemDef
+		{
+			rect 97 2 0 0 1 1
+			decoration
+			visible 1
+			forecolor 0.69 0.69 0.69 1
+			type 1
+			textfont 1
+			textalign 5
+			textstyle 6
+			textscale 0.4583
+			exp text ( "@QUICKMESSAGE_QUICK_MESSAGE" )
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 36 0 0 0 0
+			decoration
+			visible 1
+			group "ingamebox"
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_1_YES_SIR"
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 52 0 0 0 0
+			decoration
+			visible 1
+			group "ingamebox"
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_2_NO_SIR"
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 68 0 0 0 0
+			decoration
+			visible 1
+			group "ingamebox"
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_3_IM_ON_MY_WAY"
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 84 0 0 0 0
+			decoration
+			visible 1
+			group "ingamebox"
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_4_SORRY"
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 100 0 0 0 0
+			decoration
+			visible 1
+			group "ingamebox"
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_5_GREAT_SHOT"
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 116 0 0 0 0
+			decoration
+			visible 1
+			group "ingamebox"
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_6_TOOK_LONG_ENOUGH"
+		}
+		itemDef
+		{
+			name "window"
+			rect 16 148 0 0 0 0
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 1
+			textaligny 8
+			textstyle 3
+			textscale 0.375
+			text "@QUICKMESSAGE_ESC_EXIT"
+		}
+	}
+}
