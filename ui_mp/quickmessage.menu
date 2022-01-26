@@ -55,7 +55,6 @@
 		}
 		itemDef
 		{
-			name "fuck"
 			rect -4 -4 194 RECT_HEIGHT 0 0
 			decoration
 			visible 1
@@ -68,7 +67,6 @@
 		}
 		itemDef
 		{
-			name "feck"
 			rect -4 -4 194 RECT_HEIGHT 0 0
 			decoration
 			visible 1
