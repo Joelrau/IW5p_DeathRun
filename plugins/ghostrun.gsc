@@ -80,10 +80,10 @@ onPlayerSpawned()
 {
 	for(;;)
 	{
-		level waittill("player_spawned", player);
+		level waittill("jumper", player);
 		if(!isDefined(player.ghost) || player.ghost == false)
 		{
-			player show();
+			//player show();
 		}
 	}
 }
@@ -149,7 +149,7 @@ keepHidingGhost()
 	{
 		self detachAll();
 		self setModel(level.ghostRunModel);
-		self hide();
+		//self hide();
 		wait 1;
 	}
 }
@@ -232,8 +232,6 @@ KillGhostRun()
 {
 	self.ghost = false;
 	self GhostHud();
-	if(isAlive(self))
-		self suicide();
 	self notify("killghostrun");
 }
 
@@ -245,7 +243,8 @@ KillGhostRunOnEndTrigger()
 		level.endmap_trig waittill("trigger", player);
 		if(player == self)
 		{
-			player KillGhostRun();
+			if(isAlive(player))
+				player suicide();
 		}
 	}
 }

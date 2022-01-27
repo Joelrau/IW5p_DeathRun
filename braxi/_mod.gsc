@@ -462,6 +462,12 @@ PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vP
 		eAttacker suicide();
 		return;
 	}
+	
+	if( isGhost( self ) && isPlayer( eAttacker ) && eAttacker.pers["team"] == "axis" )
+	{
+		self suicide();
+		return;
+	}
 
 	level notify( "player_damage", self, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, psOffsetTime );
 

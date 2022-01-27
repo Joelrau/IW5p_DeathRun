@@ -667,7 +667,8 @@ adminCommands( admin, pickingType )
 			if( isDefined( player ) && !player isActuallyAlive() )
 			{
 				if( !isDefined( player.pers["team"] ) || isDefined( player.pers["team"] ) && player.pers["team"] == "spectator" )
-					player braxi\_teams::setTeam( "allies" );
+					continue;
+				player braxi\_teams::setTeam( "allies" );
 				player braxi\_mod::spawnPlayer();
 				player iPrintlnBold( "^1You were respawned by the Admin" );
 			}
