@@ -35,6 +35,9 @@ main()
 	LoadPlugin( plugins\ez_knife::init, "EZ Knife", "Ohh Rexy<3" );
 	LoadPlugin( plugins\healthbar::init, "Healthbar", "unknown" );
 	
+	LoadPlugin( plugins\quickdraw::init, "Quickdraw", "quaK" );
+	LoadPlugin( plugins\nohardscope::init, "No Hard Scope", "Legend" );
+	
 	LoadPlugin( plugins\dev::init, "Developer(^1debug^7)", "quaK" );
 	/* ==== END ==== */
 }
