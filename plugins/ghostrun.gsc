@@ -174,10 +174,13 @@ GhostHud( text )
 		self.ghostHud.archived = false;
 		self.ghostHud.hidewheninmenu = true;
 	}
-	if(!isDefined(text) || text == "")
-		self.ghostHud destroy();
 	else
-		self.ghostHud setText( text );
+	{
+		if(!isDefined(text) || text == "")
+			self.ghostHud destroy();
+		else
+			self.ghostHud setText( text );
+	}
 }
 
 GhostHudWatcher()
