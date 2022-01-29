@@ -126,6 +126,7 @@ main()
 		print( "Plugins initialized" );
 	}
 	
+	thread shittyRenderer();
 	//thread viewmodel_hacks();
 }
 
@@ -164,7 +165,7 @@ precache()
 
 	_precacheStatusIcon( "hud_status_connecting" );
 	_precacheStatusIcon( "hud_status_dead" );
-	//_precacheHeadIcon( "headicon_admin" );
+	_precacheHeadIcon( "headicon_admin" );
 	
 	level.text["round_begins_in"] = &"BRAXI_ROUND_BEGINS_IN";
 	level.text["waiting_for_players"] = &"BRAXI_WAITING_FOR_PLAYERS";
@@ -183,6 +184,52 @@ precache()
 	precacheModel("mp_fullbody_ally_juggernaut");
 	precacheModel("viewhands_juggernaut_ally");
 	precacheItem("iw5_deserteagle_mp");
+}
+
+shittyRenderer() // Sometimes moving/rotating brushmodels don't render properly. This "fixes" that.
+{
+	level waittill("connected");
+	brushes = getEntArray("script_brushmodel", "classname");
+	for(i = 0; i < brushes.size; i++)
+	{
+		brush = brushes[i];
+		brush thread shittyRendererBrushMove();
+		brush thread shittyRendererBrushRotate();
+	}
+}
+
+shittyRendererBrushMove()
+{
+	while(isDefined(self))
+	{
+		origin = self.origin;
+		while(isDefined(self) && origin == self.origin)
+			wait 0.05;
+		
+		if(!isDefined(self)) 
+			return;
+		
+		self waittill("movedone");
+		self moveTo(self.origin, 0.05);
+		wait 15;
+	}
+}
+
+shittyRendererBrushRotate()
+{
+	while(isDefined(self))
+	{
+		angles = self.angles;
+		while(isDefined(self) && angles == self.angles)
+			wait 0.05;
+		
+		if(!isDefined(self)) 
+			return;
+		
+		self waittill("rotatedone");
+		self rotateTo(self.angles, 0.05);
+		wait 15;
+	}
 }
 
 viewmodel_hacks()

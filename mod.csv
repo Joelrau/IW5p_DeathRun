@@ -143,6 +143,8 @@ material,spray24_menu
 
 material,hud_icon_life
 
+material,headicon_admin
+
 # XMODELS
 xmodel,com_teddy_bear
 

@@ -740,34 +740,20 @@ triggerOff()
 /* linkTo */
 _linkTo(what)
 {
-	self thread __linkTo(what);
-}
-__linkTo(what)
-{
-	self endon("death");
-	self._linked = true;
-	force = 10;
-	while(isDefined(self) && isDefined(what) && self._linked == true)
+	if( isPlayer( self ) )
 	{
-		if (isPlayer(self))
-		{
-			at = ((what.origin[0] - self.origin[0]) * force, (what.origin[1] - self.origin[1]) * force, (what.origin[2] - self.origin[2]) * force);
-			self setVelocity(at);
-			wait 0.05;
-		}
-		else
-		{
-			self.origin = what.origin;
-			wait 0.05;
-		}
+		self playerLinkTo(what);
 	}
-	self _unlink();
+	else
+	{
+		self linkTo(what);
+	}
 }
 
 /* unlink */
 _unlink()
 {
-	self._linked = false;
+	self unlink();
 }
 
 /* freezeControls */
