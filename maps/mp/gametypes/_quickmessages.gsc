@@ -222,14 +222,12 @@ doQuickMessage( soundalias, saytext )
 	if(self.sessionstate != "playing")
 		return;
 
-	prefix = "US_";
-
-	//prefix = maps\mp\gametypes\_teams::getTeamVoicePrefix( self.team );
-	//
-	//if ( self.team == "allies" )
-	//	prefix = "US_";
-	//else if ( self.team == "axis" )
-	//	prefix = "RU_";
+	prefix = maps\mp\gametypes\_teams::getTeamVoicePrefix( self.team );
+	
+	if ( self.team == "allies" )
+		prefix = "US_";
+	else if ( self.team == "axis" )
+		prefix = "AB_";
 
 	if(isdefined(level.QuickMessageToAll) && level.QuickMessageToAll)
 	{

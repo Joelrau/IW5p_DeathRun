@@ -114,6 +114,28 @@ sound,US_mp_stm_needreinforcements
 sound,US_mp_stm_sniper
 sound,US_mp_stm_watchsix
 
+sound,AB_mp_cmd_attackleftflank
+sound,AB_mp_cmd_attackrightflank
+sound,AB_mp_cmd_fallback
+sound,AB_mp_cmd_followme
+sound,AB_mp_cmd_holdposition
+sound,AB_mp_cmd_movein
+sound,AB_mp_cmd_regroup
+sound,AB_mp_cmd_suppressfire
+sound,AB_mp_rsp_comeon
+sound,AB_mp_rsp_greatshot
+sound,AB_mp_rsp_nosir
+sound,AB_mp_rsp_onmyway
+sound,AB_mp_rsp_sorry
+sound,AB_mp_rsp_yessir
+sound,AB_mp_stm_areasecure
+sound,AB_mp_stm_enemiesspotted
+sound,AB_mp_stm_enemyspotted
+sound,AB_mp_stm_iminposition
+sound,AB_mp_stm_needreinforcements
+sound,AB_mp_stm_sniper
+sound,AB_mp_stm_watchsix
+
 # MATERIALS
 material,spray0_menu
 material,spray1_menu

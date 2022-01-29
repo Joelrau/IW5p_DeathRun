@@ -4,24 +4,24 @@
     "head": [
         {
             "aliasName": "US_mp_rsp_nosir",
-            "centerPercentage": 0.10000000149011612,
+            "centerPercentage": 0.0,
             "chainAliasName": null,
-            "distMax": 2800.0,
-            "distMin": 7.0,
+            "distMax": 700.0,
+            "distMin": 360.0,
             "envelopMax": 0.0,
             "envelopMin": 0.0,
             "envelopPercentage": 0.0,
-            "flags": 12548,
+            "flags": 2304,
             "lfePercentage": 0.0,
             "masterPercentage": 0.0,
             "masterPriority": 50,
-            "mixerGroup": "max",
+            "mixerGroup": null,
             "pitchMax": 1.0,
             "pitchMin": 1.0,
             "probability": 1.0,
             "secondaryAliasName": null,
             "sequence": 0,
-            "slavePercentage": 0.699999988079071,
+            "slavePercentage": 1.0,
             "soundfile": "battlechatter/US/MP/US_1_rsp_negative_01.wav",
             "speakerMap": {
                 "channelMaps": [
@@ -149,10 +149,10 @@
             "subtitle": null,
             "type": 2,
             "velocityMin": 0.0,
-            "volMax": 0.949999988079071,
-            "volMin": 0.949999988079071,
-            "volModIndex": 26,
-            "volumeFalloffCurve": "reaction"
+            "volMax": 0.9,
+            "volMin": 0.9,
+            "volModIndex": 35,
+            "volumeFalloffCurve": "$default"
         }
     ]
 }
