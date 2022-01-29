@@ -174,7 +174,7 @@ GhostHud( text )
 		self.ghostHud.archived = false;
 		self.ghostHud.hidewheninmenu = true;
 	}
-	else
+	if(isDefined(self.ghostHud))
 	{
 		if(!isDefined(text) || text == "")
 			self.ghostHud destroy();
