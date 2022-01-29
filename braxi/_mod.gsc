@@ -126,7 +126,7 @@ main()
 		print( "Plugins initialized" );
 	}
 	
-	thread shittyRenderer();
+	//thread shittyRenderer();
 	//thread viewmodel_hacks();
 }
 
