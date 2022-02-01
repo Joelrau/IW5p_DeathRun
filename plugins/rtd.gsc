@@ -245,7 +245,7 @@ Clone()
 	level endon( "endround" );
 	
 	self thread _clone_watcher();
-	while( self.sessionstate == "playing")
+	while(isDefined(self) && self.sessionstate == "playing")
 	{
 		if(self getStance() == "stand" && isDefined( self.clon ))
 		{
@@ -262,7 +262,7 @@ Clone()
 			self notify("newclone");
 			self thread hideClone();
 
-			while(self getStance() != "stand")
+			while(isDefined(self) && isAlive(self) && self getStance() != "stand")
 				wait .05;
 		}
 		wait .05;
@@ -291,7 +291,7 @@ hideClone()
 	for(k=0;k<8;k++)
 		self.clon[k] = self clonePlayer(10);
 				
-	while( self.sessionstate == "playing" )
+	while( isDefined(self) && self.sessionstate == "playing" )
 	{
 		if(isDefined(self.clon[0]))
 		{

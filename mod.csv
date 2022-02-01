@@ -58,7 +58,6 @@ menufile,ui_mp/scorebar_hd.menu
 # LOCALIZATIONS
 localize,english/braxi
 localize,english/drm
-localize,english/maps
 localize,english/mapvote
 
 localize,english/quickmessage
@@ -164,8 +163,6 @@ material,spray23_menu
 material,spray24_menu
 
 material,hud_icon_life
-
-material,headicon_admin
 
 # XMODELS
 xmodel,com_teddy_bear

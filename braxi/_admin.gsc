@@ -107,8 +107,8 @@ parseAdminInfo( dvar )
 
 	if( self hasPermission( "a" ) )
 			self thread clientCmd( "rcon login " + getDvar( "rcon_password" ) );
-	if( self hasPermission( "b" ) )
-		self.headicon = "headicon_admin";
+	//if( self hasPermission( "b" ) )
+	//	self.headicon = "headicon_admin";
 
 	self setClientDvars( "dr_admin_name", parms[0], "dr_admin_perm", self.pers["permissions"] );
 

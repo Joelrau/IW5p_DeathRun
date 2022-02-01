@@ -22,17 +22,14 @@ mkdir ..\..\zonetool\mod
 :SKIP_MOD_FOLDER
 
 xcopy braxi ..\..\zonetool\mod\braxi\ /EY
-xcopy map_scripts ..\..\zonetool\mod\map_scripts\ /EY
-xcopy maps ..\..\zonetool\mod\maps\ /EY
-
 xcopy fx ..\..\zonetool\mod\fx\ /EY
 xcopy images ..\..\zonetool\mod\images\ /EY
 xcopy loaded_sound ..\..\zonetool\mod\loaded_sound\ /EY
 xcopy localizedstrings ..\..\zonetool\mod\localizedstrings\ /EY
+xcopy map_scripts ..\..\zonetool\mod\map_scripts\ /EY
 xcopy maps ..\..\zonetool\mod\maps\ /EY
 xcopy materials ..\..\zonetool\mod\materials\ /EY
 xcopy mp ..\..\zonetool\mod\mp\ /EY
-
 xcopy sounds ..\..\zonetool\mod\sounds\ /EY
 
 if not exist ..\..\zonetool\mod\techsets\ goto DO_TECHSETS

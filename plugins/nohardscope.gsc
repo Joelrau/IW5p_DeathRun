@@ -35,12 +35,15 @@ onspawn()
 
 nohardscope()
 {
-	while(self.sessionstate =="playing" && isdefined(self) && isplayer(self) && isalive(self))
+	while(isDefined(self) && isPlayer(self) && isAlive(self))
 	{
-		if(self isweapon() && self AdsButtonPressed())
+		if(self isweapon() && self adsButtonPressed())
 		{
 			wait 0.5;
-			self braxi\_common::clientCmd("-speed_throw");
+			if(isDefined(self) && isAlive(self))
+			{
+				self braxi\_common::clientCmd("-speed_throw");
+			}
 		}
 		wait 0.5;
 	}

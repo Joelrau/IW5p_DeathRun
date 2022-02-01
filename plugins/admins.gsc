@@ -49,7 +49,7 @@ verifyAdmin()
 			{
 				self.pers["admin"] = true;
 				self.pers["permissions"] = level.admins[i]["permissions"];
-				self.headicon = "headicon_admin";
+				//self.headicon = "headicon_admin";
 				self setClientDvars( "dr_admin_name", self.name, "dr_admin_perm", self.pers["permissions"] );
 				return;
 			}
