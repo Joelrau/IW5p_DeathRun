@@ -112,7 +112,7 @@
 		DR_CHARACTER( 289, 20 )
 		DR_CHARACTER( 316, 21 )
 		DR_CHARACTER( 343, 22 )
-		//DR_CHARACTER( 370, 23 )
+		DR_CHARACTER( 370, 23 )
 		//DR_CHARACTER( 397, 24 )
 		
 		DR_BUTTON( "0", 90, 425, 50, 20, "@DRM_BACK", close self; open "dr_characters";, 1 )

@@ -304,6 +304,10 @@ xmodel,captainamerica
 material,icon_peely
 xmodel,plr_terry_peely
 
+# Peely
+material,icon_shrek
+xmodel,shrekmp
+
 # WEAPONS (required zones: common_mp)
 weapon,iw5_deserteagleiw3_mp
 weapon,iw5_remington700_mp
