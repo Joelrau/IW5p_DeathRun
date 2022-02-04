@@ -127,7 +127,6 @@ main()
 	}
 	
 	//thread shittyRenderer();
-	//thread viewmodel_hacks();
 }
 
 precache()
@@ -229,23 +228,6 @@ shittyRendererBrushRotate()
 		self waittill("rotatedone");
 		self rotateTo(self.angles, 0.05);
 		wait 15;
-	}
-}
-
-viewmodel_hacks()
-{
-	level waittill("jumper", player);
-	while(1)
-	{
-		if(player playerAds() > 0.0)
-		{
-			player setClientDvar("viewModelHacks", 1);
-		}
-		else
-		{
-			player setClientDvar("viewModelHacks", 0);
-		}
-		wait 0.1;
 	}
 }
 
@@ -1382,8 +1364,11 @@ roundStartTimer()
 		
 	wait level.dvar["spawn_time"];
 	
-	level.matchStartText destroyElem();
-	level.matchStartTimer destroyElem();
+	if( isDefined( level.matchStartText ) )
+		level.matchStartText destroyElem();
+	
+	if( isDefined( level.matchStartTimer ) )
+		level.matchStartTimer destroyElem();
 }
 
 doHud()

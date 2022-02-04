@@ -156,10 +156,10 @@ _watchTrigger()
 				{
 					player thread _hintString( self, self.hintstring );
 					player thread _cursorHint( self, self.cursorhint );
-					if(!player useButtonPressed() || isDefined(player.use_trigger_delay) && player.use_trigger_delay > 0)
+					if(!player useButtonPressed() || isDefined(player.use_trigger_holding) && player.use_trigger_holding == true)
 						continue;
 					
-					player thread _use_trigger_wait(0.2);
+					player thread _use_trigger_holding();
 				}
 
                 self notify("trigger", player);
@@ -491,49 +491,49 @@ moveTrigger(amount, time, axis)
 getTrig(name, key)
 {
 	if (!isDefined(level.spawnableTriggers))
-		return;
+		return undefined;
 	
 	for(i = 0; i < level.spawnableTriggers.size; i++)
 	{
-		maptrig = level.spawnableTriggers[i];
+		trig = level.spawnableTriggers[i];
 		if (key == "targetname")
 		{
-			if (maptrig.targetname == name)
-				return maptrig;
+			if (trig.targetname == name)
+				return trig;
 		}
 		else if (key == "classname")
 		{
-			if (maptrig.classname == name)
-				return maptrig;
+			if (trig.classname == name)
+				return trig;
 		}
 	}
-	return "NoTrigger";
+	return undefined;
 }
 
 getTrigArray(name, key)
 {
 	if (!isDefined(level.spawnableTriggers))
-		return;
+		return [];
 	
 	array = [];
 	x = 0;
 	
 	for(i = 0; i < level.spawnableTriggers.size; i++)
 	{
-		maptrig = level.spawnableTriggers[i];
+		trig = level.spawnableTriggers[i];
 		if (key == "targetname")
 		{
-			if (maptrig.targetname == name)
+			if (trig.targetname == name)
 			{
-				array[x] = maptrig;
+				array[x] = trig;
 				x++;
 			}
 		}	
 		else if (key == "classname")
 		{
-			if (maptrig.classname == name)
+			if (trig.classname == name)
 			{
-				array[x] = maptrig;
+				array[x] = trig;
 				x++;
 			}
 		}
@@ -544,33 +544,33 @@ getTrigArray(name, key)
 getTriggerNumber()
 {
 	if (!isDefined(level.spawnableTriggers))
-		return;
+		return -1;
 	
 	for(i = 0; i < level.spawnableTriggers.size; i++)
 	{
 		if (level.spawnableTriggers[i] == self)
 			return i;
 	}
-	return "NoTrigger";
+	return -1;
 }
 
 getTrigByNum( number )
 {
 	if (!isDefined(level.spawnableTriggers))
-		return;
+		return undefined;
 	
 	for(i = 0; i < level.spawnableTriggers.size; i++)
 	{
 		if (i == number)
 			return level.spawnableTriggers[i];
 	}
-	return "NoTrigger";
+	return undefined;
 }
 
 getAllTriggers()
 {
 	if (!isDefined(level.spawnableTriggers))
-		return;
+		return [];
 	
 	return level.spawnableTriggers;
 }
@@ -697,9 +697,10 @@ _canTrigger( trigger ) // fix for noclip triggers
 	return false;
 }
 
-_use_trigger_wait( waittime )
+_use_trigger_holding()
 {
-	self.use_trigger_delay = waittime;
-	wait ( self.use_trigger_delay );
-	self.use_trigger_delay = 0;
+	self.use_trigger_holding = true;
+	while(self useButtonPressed())
+		wait ( 0.05 );
+	self.use_trigger_holding = false;
 }
