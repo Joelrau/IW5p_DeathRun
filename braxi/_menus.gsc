@@ -48,7 +48,7 @@ onMenuResponse()
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
-		print("menu response: [" + self.name + "]" + menu + "(" + response + ")");
+		//print("menu response: [" + self.name + "]" + menu + "(" + response + ")");
 		
 		///#
 		//iPrintLn( self getEntityNumber() + " menuresponse: " + menu + " '" + response +"'" );
