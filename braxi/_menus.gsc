@@ -32,9 +32,8 @@ onPlayerConnect()
 {
 	for(;;)
 	{
-		level waittill("connected", player);
+		level waittill("connecting", player);
 		
-		player clientCmd("exec deathrun_controls.cfg");
 		player thread onMenuResponse();
 	}
 }
@@ -49,7 +48,7 @@ onMenuResponse()
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
-		//print("menu response: [" + self.name + "]" + menu + "(" + response + ")");
+		print("menu response: [" + self.name + "]" + menu + "(" + response + ")");
 		
 		///#
 		//iPrintLn( self getEntityNumber() + " menuresponse: " + menu + " '" + response +"'" );
