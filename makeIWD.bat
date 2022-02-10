@@ -3,6 +3,7 @@
 if exist deathrun.iwd del deathrun.iwd
 7za a -tzip deathrun.iwd maps
 7za a -tzip deathrun.iwd deathrun_readme.txt
+7za a -tzip deathrun.iwd deathrun_controls.cfg
 
 if exist deathrun_images.iwd del deathrun_sounds.iwd
 7za a -tzip deathrun_sounds.iwd sound
