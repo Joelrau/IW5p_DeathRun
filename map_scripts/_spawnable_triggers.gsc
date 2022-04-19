@@ -16,7 +16,7 @@ To spawn a trigger:
     See extra settings. A new trigger entity is returned.
 
     Ex:
-        trigger = spawnTrigger( volume_array, "trigger_multiple", "classname", "targetname", "hintstring", dmg );
+        trigger = spawnTrigger( volume_array, origin, "trigger_multiple", "classname", "targetname", "hintstring", dmg );
     This would spawn a trigger_multiple.
 
 
