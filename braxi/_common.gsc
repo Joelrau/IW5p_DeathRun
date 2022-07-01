@@ -405,7 +405,7 @@ annoyMe()
 
 bxLogPrint( text )
 {
-	if( level.dvar["logPrint"] )
+	if( getDvarInt("logfile") )
 		logPrint( text + "\n" );
 }
 
@@ -458,7 +458,7 @@ destroySpawnedHUD( hud, duration )
 
 warning( msg )
 {
-	if( !level.dvar[ "dev" ] )
+	if( !getDvarInt("developer_script") )
 		return;
 	iPrintLnBold( "^3WARNING: " + msg  );
 	print( "^3WARNING: " + msg );
